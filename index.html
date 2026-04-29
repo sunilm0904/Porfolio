@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunil | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            overflow-x: hidden; /* ✅ Fix scroll issue */
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #0ea5e9, #6366f1);
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0%
+            }
+
+            50% {
+                background-position: 100%
+            }
+
+            100% {
+                background-position: 0%
+            }
+        }
+
+        /* 🔥 NAVBAR FIXED */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            z-index: 1000;
+        }
+
+            /* CENTER MENU */
+            .navbar .menu {
+                display: flex;
+                gap: 25px;
+                margin: auto; /* ✅ centers menu */
+            }
+
+            .navbar a {
+                color: white;
+                text-decoration: none;
+                font-size: 15px;
+            }
+
+                .navbar a:hover {
+                    color: #38bdf8;
+                }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero span {
+                color: #38bdf8;
+            }
+
+            .hero p {
+                max-width: 700px;
+                color: #cbd5f5;
+                line-height: 1.6;
+            }
+
+        /* BUTTON */
+        .btn {
+            padding: 10px 20px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+        }
+
+        /* CARDS */
+        .card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+            }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+            gap: 20px;
+        }
+
+        /* SKILLS */
+        .skills span {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 5px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 6px;
+        }
+
+        /* SCROLL ANIMATION */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: 1s;
+        }
+
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+        }
+
+        /* REMOVE SCROLLBAR LOOK */
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+       
+        <div class="menu">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+            <!-- GitHub Link -->
+            <a href="https://github.com/sunilm0904" target="_blank">
+                GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero reveal">
+        <h1>Hi, I'm <span>Sunil</span></h1>
+        <h3>SQL Developer | Data & Automation Engineer</h3>
+
+        <p>
+            I specialize in database development, report generation, and data-driven applications.
+            With hands-on experience in SQL Server, SSRS, and Power BI, I build efficient solutions
+            that transform raw data into meaningful insights.
+        </p>
+
+        <p>
+            I have also developed full-stack applications using ASP.NET MVC,
+            including authentication systems, role-based access, and responsive UI.
+        </p>
+
+        <a href="#projects" class="btn">View My Work</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am a SQL Developer with strong expertise in database design,
+                query optimization, and reporting solutions. I have developed
+                real-time and shift-based reports using SSRS and handled
+                large-scale data operations.
+            </p>
+
+            <p>
+                I am experienced in T-SQL, stored procedures, and performance tuning.
+                I have also worked with Power BI to create interactive dashboards.
+            </p>
+
+            <p>
+                Additionally, I have knowledge in Java, HTML, CSS, and software testing,
+                allowing me to work across both backend and frontend development.
+            </p>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="reveal">
+    <h2>Experience</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>SQL Development</h3>
+            <p>
+                Developed complex T-SQL queries, stored procedures, and functions
+                to handle large-scale data processing efficiently.
+            </p>
+            <p>
+                Worked on query optimization, indexing, and performance tuning
+                to improve execution time and system performance.
+            </p>
+            <p>
+                Managed data extraction, transformation, and loading processes
+                for accurate and reliable data handling.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>SSRS Reports</h3>
+            <p>
+                Designed and developed SSRS reports including shift-wise,
+                daily, and monthly reports for business analysis.
+            </p>
+            <p>
+                Implemented parameterized reports and real-time data visualization
+                for better decision-making.
+            </p>
+            <p>
+                Worked on report optimization and handled large datasets
+                efficiently within reporting solutions.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Power BI</h3>
+            <p>
+                Created interactive dashboards and visual reports to monitor
+                KPIs and business performance.
+            </p>
+            <p>
+                Integrated multiple data sources and transformed raw data
+                into meaningful insights using data modeling techniques.
+            </p>
+            <p>
+                Designed user-friendly visuals to support business
+                decision-making and reporting needs.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Application Development</h3>
+            <p>
+                Developed web applications using ASP.NET Core MVC with
+                structured architecture and clean design.
+            </p>
+            <p>
+                Implemented authentication systems and role-based access
+                control for secure user management.
+            </p>
+            <p>
+                Built responsive user interfaces and integrated backend
+                database operations using SQL Server.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="reveal">
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <span>SQL</span>
+            <span>T-SQL</span>
+            <span>SSMS</span>
+            <span>SSRS</span>
+            <span>Power BI</span>
+            <span>Java</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Testing</span>
+        </div>
+    </section>
+
+    <!-- PROJECTS (UPGRADED) -->
+    <section id="projects" class="reveal">
+        <h2>Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <h3>Employee Management System</h3>
+                <p>
+                    Developed a full-stack web application using ASP.NET Core MVC with SQL Server.
+                </p>
+                <p>
+                    Implemented login system with role-based access (Admin/User),
+                    enabling secure operations.
+                </p>
+                <p>
+                    Designed CRUD functionality for managing employee records and
+                    built a responsive UI with modern design.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Online Book Store</h3>
+                <p>
+                    Built a web application for managing and browsing books using structured database design.
+                </p>
+                <p>
+                    Implemented search functionality and optimized queries for faster data retrieval.
+                </p>
+                <p>
+                    Focused on usability, database performance, and clean UI design.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+        <h2>Contact</h2>
+
+        <div class="card">
+            <p>Email: <b>sunilm9401@gmail.com</b></p>
+
+            <p>
+                GitHub:
+                <a href="https://github.com/sunilm0904" target="_blank" style="color:#38bdf8;">
+                    github.com/sunilm0904
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Sunil Portfolio
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            document.querySelectorAll('.reveal').forEach(el => {
+                let top = el.getBoundingClientRect().top;
+                if (top < window.innerHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
