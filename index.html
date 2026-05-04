@@ -4,40 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sunil | Portfolio</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
     <style>
-
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
             color: white;
-            overflow-x: hidden; /* ✅ Fix scroll issue */
+            overflow-x: hidden;
             background: linear-gradient(-45deg, #0f172a, #1e293b, #0ea5e9, #6366f1);
             background-size: 400% 400%;
             animation: gradientMove 12s ease infinite;
         }
 
         @keyframes gradientMove {
-            0% {
-                background-position: 0%
-            }
-
-            50% {
-                background-position: 100%
-            }
-
-            100% {
-                background-position: 0%
-            }
+            0%   { background-position: 0% }
+            50%  { background-position: 100% }
+            100% { background-position: 0% }
         }
 
-        /* 🔥 NAVBAR FIXED */
         .navbar {
             position: fixed;
             width: 100%;
@@ -49,33 +35,29 @@
             align-items: center;
             padding: 15px 40px;
             z-index: 1000;
+            box-sizing: border-box;
         }
 
-            /* CENTER MENU */
-            .navbar .menu {
-                display: flex;
-                gap: 25px;
-                margin: auto; /* ✅ centers menu */
-            }
+        .navbar .menu {
+            display: flex;
+            gap: 25px;
+            margin: auto;
+        }
 
-            .navbar a {
-                color: white;
-                text-decoration: none;
-                font-size: 15px;
-            }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-                .navbar a:hover {
-                    color: #38bdf8;
-                }
+        .navbar a:hover { color: #38bdf8; }
 
-        /* SECTIONS */
         section {
             padding: 100px 20px;
             max-width: 1100px;
             margin: auto;
         }
 
-        /* HERO */
         .hero {
             height: 100vh;
             display: flex;
@@ -83,21 +65,14 @@
             justify-content: center;
         }
 
-            .hero h1 {
-                font-size: 3rem;
-            }
+        .hero h1 { font-size: 3rem; }
+        .hero span { color: #38bdf8; }
+        .hero p {
+            max-width: 700px;
+            color: #cbd5f5;
+            line-height: 1.6;
+        }
 
-            .hero span {
-                color: #38bdf8;
-            }
-
-            .hero p {
-                max-width: 700px;
-                color: #cbd5f5;
-                line-height: 1.6;
-            }
-
-        /* BUTTON */
         .btn {
             padding: 10px 20px;
             background: #38bdf8;
@@ -106,9 +81,9 @@
             text-decoration: none;
             margin-top: 15px;
             display: inline-block;
+            font-weight: 600;
         }
 
-        /* CARDS */
         .card {
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
@@ -117,18 +92,14 @@
             transition: 0.3s;
         }
 
-            .card:hover {
-                transform: translateY(-5px);
-            }
+        .card:hover { transform: translateY(-5px); }
 
-        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
             gap: 20px;
         }
 
-        /* SKILLS */
         .skills span {
             display: inline-block;
             padding: 8px 12px;
@@ -137,17 +108,47 @@
             border-radius: 6px;
         }
 
-        /* SCROLL ANIMATION */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
             transition: 1s;
         }
 
-            .reveal.active {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tech tag style */
+        .tag {
+            display: inline-block;
+            background: #38bdf8;
+            color: black;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 3px;
+            font-weight: 600;
+        }
+
+        /* Dashboard button */
+        .dash-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            background: #38bdf8;
+            color: black;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .dash-btn:hover {
+            background: #0ea5e9;
+            transform: scale(1.03);
+        }
 
         footer {
             text-align: center;
@@ -155,320 +156,265 @@
             opacity: 0.7;
         }
 
-        /* REMOVE SCROLLBAR LOOK */
-        ::-webkit-scrollbar {
-            width: 0px;
-        }
+        ::-webkit-scrollbar { width: 0px; }
     </style>
 </head>
-
 <body>
 
-    <!-- NAVBAR -->
-    <div class="navbar">
-       
-        <div class="menu">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-
-            <!-- GitHub Link -->
-            <a href="https://github.com/sunilm0904" target="_blank">
-                GitHub
-            </a>
-        </div>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="menu">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/sunilm0904" target="_blank">GitHub</a>
     </div>
+</div>
 
-    <!-- HERO -->
-    <section class="hero reveal">
-        <h1>Hi, I'm <span>Sunil</span></h1>
-        <h3>SQL Developer | Data & Automation Engineer</h3>
+<!-- HERO -->
+<section class="hero reveal">
+    <h1>Hi, I'm <span>Sunil</span></h1>
+    <h3>SQL Developer | Data & Automation Engineer</h3>
+    <p>
+        I specialize in database development, report generation, and data-driven applications.
+        With hands-on experience in SQL Server, SSRS, and Power BI, I build efficient solutions
+        that transform raw data into meaningful insights.
+    </p>
+    <p>
+        I have also developed full-stack applications using ASP.NET MVC,
+        including authentication systems, role-based access, and responsive UI.
+    </p>
+    <a href="#projects" class="btn">View My Work</a>
+</section>
 
+<!-- ABOUT -->
+<section id="about" class="reveal">
+    <h2>About Me</h2>
+    <div class="card">
         <p>
-            I specialize in database development, report generation, and data-driven applications.
-            With hands-on experience in SQL Server, SSRS, and Power BI, I build efficient solutions
-            that transform raw data into meaningful insights.
+            I am a SQL Developer with strong expertise in database design,
+            query optimization, and reporting solutions. I have developed
+            real-time and shift-based reports using SSRS and handled
+            large-scale data operations.
         </p>
-
         <p>
-            I have also developed full-stack applications using ASP.NET MVC,
-            including authentication systems, role-based access, and responsive UI.
+            I am experienced in T-SQL, stored procedures, triggers, and performance tuning.
+            I have also worked with Power BI and DAX to create interactive dashboards
+            connected to live SQL Server databases.
         </p>
+        <p>
+            Additionally, I have knowledge in Java, HTML, CSS, and software testing,
+            allowing me to work across both backend and frontend development.
+        </p>
+    </div>
+</section>
 
-        <a href="#projects" class="btn">View My Work</a>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-
-        <div class="card">
-            <p>
-                I am a SQL Developer with strong expertise in database design,
-                query optimization, and reporting solutions. I have developed
-                real-time and shift-based reports using SSRS and handled
-                large-scale data operations.
-            </p>
-
-            <p>
-                I am experienced in T-SQL, stored procedures, and performance tuning.
-                I have also worked with Power BI to create interactive dashboards.
-            </p>
-
-            <p>
-                Additionally, I have knowledge in Java, HTML, CSS, and software testing,
-                allowing me to work across both backend and frontend development.
-            </p>
-        </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="reveal">
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
     <h2>Experience</h2>
-
     <div class="grid">
 
         <div class="card">
             <h3>SQL Development</h3>
-            <p>
-                Developed complex T-SQL queries, stored procedures, and functions
-                to handle large-scale data processing efficiently.
-            </p>
-            <p>
-                Worked on query optimization, indexing, and performance tuning
-                to improve execution time and system performance.
-            </p>
-            <p>
-                Managed data extraction, transformation, and loading processes
-                for accurate and reliable data handling.
-            </p>
+            <p>Developed complex T-SQL queries, stored procedures, and functions
+            to handle large-scale data processing efficiently.</p>
+            <p>Worked on query optimization, indexing, and performance tuning
+            to improve execution time and system performance.</p>
+            <p>Managed data extraction, transformation, and loading processes
+            for accurate and reliable data handling.</p>
         </div>
 
         <div class="card">
             <h3>SSRS Reports</h3>
-            <p>
-                Designed and developed SSRS reports including shift-wise,
-                daily, and monthly reports for business analysis.
-            </p>
-            <p>
-                Implemented parameterized reports and real-time data visualization
-                for better decision-making.
-            </p>
-            <p>
-                Worked on report optimization and handled large datasets
-                efficiently within reporting solutions.
-            </p>
+            <p>Designed and developed SSRS reports including shift-wise,
+            daily, and monthly reports for business analysis.</p>
+            <p>Implemented parameterized reports and real-time data visualization
+            for better decision-making.</p>
+            <p>Worked on report optimization and handled large datasets
+            efficiently within reporting solutions.</p>
         </div>
 
         <div class="card">
             <h3>Power BI</h3>
-            <p>
-                Created interactive dashboards and visual reports to monitor
-                KPIs and business performance.
-            </p>
-            <p>
-                Integrated multiple data sources and transformed raw data
-                into meaningful insights using data modeling techniques.
-            </p>
-            <p>
-                Designed user-friendly visuals to support business
-                decision-making and reporting needs.
-            </p>
+            <p>Created interactive dashboards and visual reports to monitor
+            KPIs and business performance using DAX measures.</p>
+            <p>Integrated multiple data sources and transformed raw data
+            into meaningful insights using data modeling techniques.</p>
+            <p>Designed user-friendly visuals with slicers and filters to support
+            business decision-making and reporting needs.</p>
         </div>
 
         <div class="card">
             <h3>Application Development</h3>
-            <p>
-                Developed web applications using ASP.NET Core MVC with
-                structured architecture and clean design.
-            </p>
-            <p>
-                Implemented authentication systems and role-based access
-                control for secure user management.
-            </p>
-            <p>
-                Built responsive user interfaces and integrated backend
-                database operations using SQL Server.
-            </p>
+            <p>Developed web applications using ASP.NET Core MVC with
+            structured architecture and clean design.</p>
+            <p>Implemented authentication systems and role-based access
+            control for secure user management.</p>
+            <p>Built responsive user interfaces and integrated backend
+            database operations using SQL Server.</p>
         </div>
 
     </div>
 </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="reveal">
-        <h2>Skills</h2>
-
-        <div class="skills">
-            <span>SQL</span>
-            <span>T-SQL</span>
-            <span>SSMS</span>
-            <span>SSRS</span>
-            <span>Power BI</span>
-            <span>Java</span>
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>Software Testing</span>
-        </div>
-    </section>
-
-    <!-- PROJECTS (UPGRADED) -->
-    <section id="projects" class="reveal">
-        <h2>Projects</h2>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Employee Management System</h3>
-                <p>
-                    Developed a full-stack web application using ASP.NET Core MVC with SQL Server.
-                </p>
-                <p>
-                    Implemented login system with role-based access (Admin/User),
-                    enabling secure operations.
-                </p>
-                <p>
-                    Designed CRUD functionality for managing employee records and
-                    built a responsive UI with modern design.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Data Reporting & Analytics (SSRS & SQL)</h3>
-
-                <p>
-                    Developed dynamic and parameterized SSRS reports including shift-wise,
-                    daily, and monthly reports for industrial and business data analysis.
-                </p>
-
-                <p>
-                    Designed complex stored procedures and optimized queries to fetch
-                    real-time data efficiently from large datasets.
-                </p>
-
-                <p>
-                    Implemented filters such as shift timing, date ranges, and status-based
-                    conditions to ensure accurate reporting.
-                </p>
-
-                <p>
-                    Worked on performance tuning and handled high-volume data to improve
-                    report loading speed and reliability.
-                </p>
-
-                <p>
-                    Delivered reports that helped in monitoring operations,
-                    analyzing trends, and supporting business decision-making.
-                </p>
-            </div>
-
-            <div class="card">
-    <h3>🏦 Banking Transaction Analytics System</h3>
-    <p>
-        Designed and developed a complete end-to-end banking analytics 
-        system using SQL Server, SSRS, and Power BI.
-    </p>
-    <p>
-        Built normalized database schema with 5 tables covering 
-        customers, accounts, branches, and transactions with 
-        proper foreign key relationships.
-    </p>
-    <p>
-        Developed 4 stored procedures for monthly summary, 
-        branch performance, top customer analysis, and 
-        suspicious transaction detection.
-    </p>
-    <p>
-        Implemented automated audit trigger and SQL Agent job 
-        that runs daily at 8 AM to generate business summaries.
-    </p>
-    <p>
-        Built parameterized SSRS reports and interactive Power BI 
-        dashboard with DAX measures, KPI cards, and slicers.
-    </p>
-
-    <!-- TECH TAGS -->
-    <div style="margin-top:10px;">
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">SQL Server</span>
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">T-SQL</span>
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">SSRS</span>
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">Power BI</span>
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">DAX</span>
-        <span style="background:#38bdf8;color:black;padding:4px 10px;
-        border-radius:20px;font-size:12px;margin:3px;
-        display:inline-block;">SQL Agent</span>
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>SQL</span>
+        <span>T-SQL</span>
+        <span>SSMS</span>
+        <span>SSRS</span>
+        <span>Power BI</span>
+        <span>DAX</span>
+        <span>Data Modeling</span>
+        <span>Triggers</span>
+        <span>SQL Agent</span>
+        <span>Stored Procedures</span>
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Software Testing</span>
     </div>
+</section>
 
-    <!-- LIVE DASHBOARD BUTTON -->
-    <div style="margin-top:15px;">
-        <a href="https://app.powerbi.com/links/sL8x4YBYln?ctid=03bd2510-af4b-42e9-b8fe-f6c1a1249436&pbi_source=linkShare" 
-           target="_blank" 
-           style="padding:8px 18px;background:#38bdf8;color:black;
-           border-radius:8px;text-decoration:none;font-weight:600;
-           font-size:14px;">
-           📊 View Live Dashboard
-        </a>
-    </div>
-</div>
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="grid">
 
-            <div class="card">
-                <h3>Online Book Store</h3>
-                <p>
-                    Built a web application for managing and browsing books using structured database design.
-                </p>
-                <p>
-                    Implemented search functionality and optimized queries for faster data retrieval.
-                </p>
-                <p>
-                    Focused on usability, database performance, and clean UI design.
-                </p>
-            </div>
-
-
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
-        <h2>Contact</h2>
-
+        <!-- PROJECT 1: Banking -->
         <div class="card">
-            <p>Email: <b>sunilm9401@gmail.com</b></p>
-
-            <p>
-                GitHub:
-                <a href="https://github.com/sunilm0904" target="_blank" style="color:#38bdf8;">
-                    github.com/sunilm0904
+            <h3>🏦 Banking Transaction Analytics System</h3>
+            <p>Designed and developed a complete end-to-end banking analytics
+            system using SQL Server, SSRS, and Power BI.</p>
+            <p>Built normalized database schema with 5 tables covering
+            customers, accounts, branches, and transactions with
+            proper foreign key relationships.</p>
+            <p>Developed 4 stored procedures for monthly summary,
+            branch performance, top customer analysis, and
+            suspicious transaction detection.</p>
+            <p>Implemented automated audit trigger and SQL Agent job
+            that runs daily at 8 AM to generate business summaries automatically.</p>
+            <p>Built parameterized SSRS reports and interactive Power BI
+            dashboard with DAX measures, KPI cards, and slicers.</p>
+            <div style="margin-top:10px;">
+                <span class="tag">SQL Server</span>
+                <span class="tag">T-SQL</span>
+                <span class="tag">SSRS</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">SQL Agent</span>
+                <span class="tag">Triggers</span>
+            </div>
+            <div>
+                <a href="https://app.powerbi.com/links/sL8x4YBYln?ctid=03bd2510-af4b-42e9-b8fe-f6c1a1249436&pbi_source=linkShare"
+                   target="_blank" class="dash-btn">
+                   📊 View Live Dashboard
                 </a>
-            </p>
+            </div>
         </div>
-    </section>
 
-    <footer>
-        © 2026 Sunil Portfolio
-    </footer>
+        <!-- PROJECT 2: Retail -->
+        <div class="card">
+            <h3>🛒 Retail Sales & Inventory Analytics</h3>
+            <p>Built a complete retail analytics system using SQL Server,
+            SSRS, and Power BI covering sales performance, inventory
+            tracking, and customer insights.</p>
+            <p>Designed 7-table normalized database with products, categories,
+            suppliers, inventory, customers, and sales with a computed
+            TotalAmount column.</p>
+            <p>Generated 500+ realistic sales records using pure T-SQL
+            with CHECKSUM(NEWID()) technique for random data generation.</p>
+            <p>Built 4 stored procedures for monthly sales summary, top selling
+            products, low stock alerts, and category performance analysis.</p>
+            <p>Implemented chained trigger system — sale insert auto updates
+            inventory, which auto logs stock alerts when stock drops
+            below reorder level.</p>
+            <p>Created 3 parameterized SSRS reports with charts and color-coded
+            stock status, and an interactive Power BI dashboard with 7 visuals
+            and DAX measures.</p>
+            <div style="margin-top:10px;">
+                <span class="tag">SQL Server</span>
+                <span class="tag">T-SQL</span>
+                <span class="tag">SSRS</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">DAX</span>
+                <span class="tag">SQL Agent</span>
+                <span class="tag">Triggers</span>
+            </div>
+            <div>
+                <a href="PASTE_YOUR_RETAIL_POWER_BI_LINK_HERE"
+                   target="_blank" class="dash-btn">
+                   📊 View Live Dashboard
+                </a>
+            </div>
+        </div>
 
-    <script>
-        window.addEventListener('scroll', function () {
-            document.querySelectorAll('.reveal').forEach(el => {
-                let top = el.getBoundingClientRect().top;
-                if (top < window.innerHeight - 100) {
-                    el.classList.add('active');
-                }
-            });
+        <!-- PROJECT 3: Employee Management -->
+        <div class="card">
+            <h3>Employee Management System</h3>
+            <p>Developed a full-stack web application using ASP.NET Core MVC with SQL Server.</p>
+            <p>Implemented login system with role-based access (Admin/User),
+            enabling secure operations.</p>
+            <p>Designed CRUD functionality for managing employee records and
+            built a responsive UI with modern design.</p>
+        </div>
+
+        <!-- PROJECT 4: Data Reporting -->
+        <div class="card">
+            <h3>Data Reporting & Analytics (SSRS & SQL)</h3>
+            <p>Developed dynamic and parameterized SSRS reports including shift-wise,
+            daily, and monthly reports for industrial and business data analysis.</p>
+            <p>Designed complex stored procedures and optimized queries to fetch
+            real-time data efficiently from large datasets.</p>
+            <p>Implemented filters such as shift timing, date ranges, and status-based
+            conditions to ensure accurate reporting.</p>
+            <p>Worked on performance tuning and handled high-volume data to improve
+            report loading speed and reliability.</p>
+        </div>
+
+        
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: <b>sunilm9401@gmail.com</b></p>
+        <p>
+            GitHub:
+            <a href="https://github.com/sunilm0904" target="_blank" style="color:#38bdf8;">
+                github.com/sunilm0904
+            </a>
+        </p>
+    </div>
+</section>
+
+<footer>© 2026 Sunil Portfolio</footer>
+
+<script>
+    window.addEventListener('scroll', function () {
+        document.querySelectorAll('.reveal').forEach(el => {
+            let top = el.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+                el.classList.add('active');
+            }
         });
-    </script>
+    });
+
+    // Trigger reveal on load for hero
+    document.querySelectorAll('.reveal').forEach(el => {
+        let top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add('active');
+        }
+    });
+</script>
 
 </body>
 </html>
